@@ -39,7 +39,7 @@
 		{% if latest_algorithm_list %}
             <ul class="list-group">
               {% for algorithm in latest_algorithm_list %}
-                   <li><a href="/polls/{{ algorithm.id }}/">
+                   <li><a href="/algorithms/{{ algorithm.id }}/">
                        <h1>{{ algorithm.name }}</h1>
                        <br>
                        <p>{{ algorithm.description }}</p>

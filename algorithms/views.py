@@ -8,7 +8,7 @@ def index(request):
     context = {
         'latest_algorithm_list': latest_algorithm_list
     }
-    return render(request, 'polls/index.html', context)
+    return render(request, 'algorithms/index.html', context)
 
 
 def detail(request, algorithm_id):
