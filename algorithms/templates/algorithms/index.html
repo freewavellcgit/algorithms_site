@@ -1,42 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="{% static 'algorithms/plugins/bootstrap/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'algorithms/font-awesome/css/font-awesome.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'algorithms/css/styles.css' %}">
-    <title>Algorithms</title>
-</head>
-<body class="bg-dark-gradient">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="/" class="navbar-brand">
-        <img src="{% static 'algorithms/images/favicon.png' %}" width="30" height="30" alt="My image">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            area-controls="navbarSupportedContent" area-expanded="false" area-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a href="/" class="nav-link">Main</a>
-            </li>
-            <li class="nav-item">
-                <a href="/algo" class="nav-link">Algorithms</a>
-            </li>
-            <li class="nav-item">
-                <a href="/about_us" class="nav-link">About us</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input type="text" class="form-control mr-sm-2" placeholder="Search" area-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0">Search</button>
-        </form>
-    </div>
-</nav>
-
+{% extends "algorithms/wrapper.html" %}
+{% block content %}
+{% load static %}
 <header class="header-style-10">
     <div class="overlay op-10"></div>
     <div class="row p-relative">
@@ -52,7 +16,7 @@
                     <div class="carousel-caption ">
                         <h1 class="font-jumbo font-handwritten mb-4"><b class="p-2">The Early Eagle</b></h1>
                         <p>Your true companion</p>
-                        <a href="#" class="btn btn-lg btn-dark flat cta"><i class="mr-3 fa fa-bicycle"></i>Specifications</a>
+                        <a href="#" class="btn btn-lg btn-dark flat cta"><i class="mr-3 fa fa-plane"></i>Specifications</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -60,9 +24,8 @@
                     <div class="carousel-caption ">
                         <h1 class="font-jumbo font-handwritten  mb-4"><b class="p-2">The Middle Mongoose</b></h1>
                         <p>Your true companion</p>
-
-                        <a href="#" class="btn btn-lg btn-dark flat cta"><i class="mr-3 fa fa-bicycle"></i>Specifications</a>
-
+                        <a href="#" class="btn btn-lg btn-dark flat cta"><i
+                                class="mr-3 fa fa-car"></i>Specifications</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -86,39 +49,30 @@
     </div>
 </header>
 
-
 <section class="py-5 bg-light">
     <div class="container">
         {% if latest_algorithm_list %}
         <div class="row">
             {% for algorithm in latest_algorithm_list %}
-            <div class="col-12 col-md-6 col-lg-6 my-4">
-                <div class="card card-blog-4 background-cover px-5 pt-5 pb-5 cwhite"
-                     style="background-image:url(' {% static 'algorithms/images/gr_mac.jpeg' %}')">
-                    <div class="overlay op-4"></div>
-                    <div class="content p-md-4">
-                        <h6 class="mt-5"><i class="fa fa-flash m-2"></i>Trending</h6>
-                        <h4 class="my-2"><a href="/algorithms/{{ algorithm.id }}/">{{ algorithm.name }}</a></h4>
-                        <img src="{% static 'algorithms/images/gr_mac.jpeg' %}" class="circle mx-auto my-3 inline"
-                             width="35px">
-                        <h6 class="inline m-3 font-title">Author Name</h6>
+            <div class="col-12 col-md-6 col-lg-4 my-4">
+                <div class="card card-blog-2 material-shadow">
+                    <div class="card-header background-cover p-5"
+                         style="background-image:url(' {% static 'algorithms/images/gr_mac.jpeg' %}')"></div>
+                    <div class="card-body">
+                        <h6 class="my-2">By <a href="#" class="cprimary">{{ algorithm.blogAuthor}}</a><i
+                                class="small uppercase pull-right inline"><i class="m-1 fa fa-tag"></i><a href="#"
+                                                                                                          class="m-1">Design</a><a
+                                href="#" class="m-1"> Code</a></i></h6>
+                        <h5 class="my-3 font-body">{{ algorithm.name }}</h5>
+                        <p class="mb-3">{{ algorithm.description }}...
+                        </p>
+                        <a href="/algorithms/{{ algorithm.id }}/" class="cprimary m-1">Read More</a>
+
+                        <a href="#" class="cdanger m-1 pull-right"><i class="fa fa-heart-o mr-1"></i>30</a>
                     </div>
                 </div>
             </div>
             {% endfor %}
-            <div class="col-12 col-md-6 col-lg-6 my-4">
-                <div class="card card-blog-4 background-cover px-5 pt-5 pb-5 cwhite"
-                     style="background-image:url('{% static 'algorithms/images/mac1.jpeg' %}')">
-                    <div class="overlay op-4"></div>
-                    <div class="content p-md-4">
-                        <h6 class="mt-5"><i class="fa fa-diamond m-2"></i>Popular</h6>
-                        <h4 class="my-2"><a href="#">Small Space Big Ideas</a></h4>
-                        <img src="{% static 'algorithms/images/mac1.jpeg' %}" class="circle mx-auto my-3 inline"
-                             width="35px">
-                        <h6 class="inline m-3 font-title">Author Name</h6>
-                    </div>
-                </div>
-            </div>
         </div>
         {% else %}
         <p>No algorithms available</p>
@@ -126,7 +80,7 @@
     </div>
 </section>
 
-<div>
+<!--<div>
     {% if latest_algorithm_list %}
     <ul class="list-group">
         {% for algorithm in latest_algorithm_list %}
@@ -140,16 +94,6 @@
     {% else %}
     <p>No algorithms available</p>
     {% endif %}
-</div>
+</div> !-->
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+{% endblock %}
