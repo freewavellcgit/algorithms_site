@@ -1,5 +1,9 @@
+from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
+from django.urls import reverse_lazy
+from django.views import generic
+
 from .models import Algorithm
 
 
@@ -15,8 +19,12 @@ def detail(request, algorithm_id):
     algorithm = get_object_or_404(Algorithm, pk=algorithm_id)
     return render(request, 'algorithms/detail.html', {'algorithm': algorithm})
 
+
 def login(request):
     return render(request, 'algorithms/login.html')
 
+
 def signup(request):
     return render(request, 'algorithms/signup.html')
+
+
