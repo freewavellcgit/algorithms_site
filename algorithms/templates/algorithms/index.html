@@ -55,20 +55,20 @@
         {% if latest_algorithm_list %}
         <div class="row">
             {% for algorithm in latest_algorithm_list %}
-            <div class="col-12 col-md-6 col-lg-4 my-4">
+            <div class="col-20 col-md-6 col-lg-4 my-4">
                 <div class="card card-blog-2 material-shadow">
-                    <div class="card-header background-cover p-5" style="background-image:url('{% static 'algorithms/images/gr_mac.jpeg' %}')"></div>
+                    <div class="card-header background-cover p-5"
+                         style="background-image:url('{% static 'algorithms/images/gr_mac.jpeg' %}')"></div>
                          <!--style="background-image:url('/algorithms/static/algorithms/images/mac1.jpeg')"></div>!-->
-
                     <div class="card-body">
                         <h6 class="my-2">By <a href="#" class="cprimary">{{ algorithm.author}}</a><i
-                                class="small uppercase pull-right inline"><i class="m-1 fa fa-tag"></i><a href="#"
-                                                                                                          class="m-1">Design</a><a
-                                href="#" class="m-1"> Code</a></i></h6>
+                                class="small uppercase pull-right inline"><i class="m-1 fa fa-tag"></i>
+                            <a href="#" class="m-1">Design</a>
+                            <a href="#" class="m-1"> Code</a></i></h6>
                         <h5 class="my-3 font-body">{{ algorithm.name }}</h5>
-                        <p class="mb-3">{{ algorithm.description }}...
+                        <p class=" mb-3">{{ algorithm.description }}...
                         </p>
-                        <a href="/algorithms/{{ algorithm.id }}/" class="cprimary m-1">Read More</a>
+                        <a href="/{{ algorithm.id }}/" class="cprimary m-1">Read More</a>
 
                         <a href="#" class="cdanger m-1 pull-right"><i class="fa fa-heart-o mr-1"></i>30</a>
                     </div>
@@ -81,77 +81,5 @@
         {% endif %}
     </div>
 </section>
-
-<footer class="footer-style-13 p-3 background-cover cwhite"
-        style="background-image:url('{% static 'algorithms/images/hill-gradients.jpeg' %}')">
-    <div class="overlay op-7 bg-dark"></div>
-    <div class="row">
-        <div class="col-12 col-lg-3 my-1 text-center py-2">
-            <img src="{% static 'algorithms/images/favicon.png' %}" class="mr-2" width="40px" height="40px"><span class="font-title h5"><b>Algo</b>Help</span><br>
-            <small class="lighter my-3 op-7 inline">© 2018 All Rights Reserved</small>
-            <ul class="py-2 px-0">
-                <li class="inline"><a href="#" class=" circle btn-outline-light btn m-1 inline"><i
-                        class="fa fa-google"></i></a></li>
-                <li class="inline"><a href="#" class=" circle btn-outline-light btn m-1 inline"><i
-                        class="fa fa-twitter"></i></a></li>
-                <li class="inline"><a href="#" class=" circle btn-outline-light btn m-1 inline"><i
-                        class="fa fa-instagram"></i></a></li>
-            </ul>
-        </div>
-        <div class="col-12 col-lg-6 my-1 text-left py-2 font-title">
-            <div class="row">
-                <div class="col-4">
-                    <h6 class="uppercase py-1">Categories</h6>
-                    <ul class="py-1 px-0">
-                        <li><a href="#">AlgoTpe1</a></li>
-                        <li><a href="#">AlgoType2</a></li>
-                        <li><a href="#">AlgoType3</a></li>
-                    </ul>
-                </div>
-                <div class="col-4">
-                    <h6 class="uppercase py-1">Features</h6>
-                    <ul class="py-1 px-0">
-                        <li><a href="#">Responsive</a></li>
-                        <li><a href="#">Modular</a></li>
-                        <li><a href="#">Affordable</a></li>
-                    </ul>
-                </div>
-                <div class="col-4">
-                    <h6 class="uppercase py-1">Technologies</h6>
-                    <ul class="py-1 px-0">
-                        <li><a href="#">Jquery</a></li>
-                        <li><a href="#">HTML5</a></li>
-                        <li><a href="#">SAAS</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-3 my-1 text-left py-2">
-            <h6 class="uppercase py-1">About</h6>
-            <small class="lighter my-3 op-7 inline font-body">A simple to use, modular and responsive set of components
-                and ready made pages to launch your next project.
-            </small>
-        </div>
-        <div class="col-12 ">
-            <div class="mline bg-dark"></div>
-        </div>
-    </div>
-</footer>
-
-<!--<div>
-    {% if latest_algorithm_list %}
-    <ul class="list-group">
-        {% for algorithm in latest_algorithm_list %}
-        <li><a href="/algorithms/{{ algorithm.id }}/">
-            <h1>{{ algorithm.name }}</h1>
-            <br>
-            <p>{{ algorithm.description }}</p>
-        </a></li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>No algorithms available</p>
-    {% endif %}
-</div> !-->
 
 {% endblock %}

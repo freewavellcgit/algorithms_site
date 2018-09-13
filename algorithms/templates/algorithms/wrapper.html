@@ -34,11 +34,17 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active mx-2">
+                <li class="nav-item mx-2">
                     <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item mx-1 d-none d-lg-block">
+                    <a href="/login/" class="btn btn-warning  mx-2">Log In<i class="fa fa-chevron-right ml-3"></i></a>
+                </li>
+                <li class="nav-item mx-1 d-none d-lg-block">
+                    <a href="/signup/" class="btn btn-success  mx-2">Sign Up<i class="fa fa-chevron-right ml-3"></i></a>
                 </li>
             </ul>
         </div>
@@ -46,6 +52,64 @@
 </nav>
 {% block content %}
 {% endblock %}
+<footer class="footer-style-13 p-3 background-cover cwhite"
+        style="background-image:url('{% static 'algorithms/images/hill-gradients.jpeg' %}')">
+    <div class="overlay op-7 bg-dark"></div>
+    <div class="row">
+        <div class="col-12 col-lg-3 my-1 text-center py-2">
+            <img src="{% static 'algorithms/images/favicon.png' %}" class="mr-2" width="40px" height="40px"><span
+                class="font-title h5"><b>Algo</b>Help</span><br>
+            <small class="lighter my-3 op-7 inline">© 2018 All Rights Reserved</small>
+            <ul class="py-2 px-0">
+                <li class="inline"><a href="#" class=" circle btn-outline-light btn m-1 inline"><i
+                        class="fa fa-google"></i></a></li>
+                <li class="inline"><a href="#" class=" circle btn-outline-light btn m-1 inline"><i
+                        class="fa fa-twitter"></i></a></li>
+                <li class="inline"><a href="#" class=" circle btn-outline-light btn m-1 inline"><i
+                        class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-lg-6 d-none d-sm-block my-1 text-left py-2 font-title">
+            <div class="row">
+                <div class="col-4">
+                    <h6 class="uppercase py-1">Categories</h6>
+                    <ul class="py-1 px-0">
+                        <li><a href="#">AlgoTpe1</a></li>
+                        <li><a href="#">AlgoType2</a></li>
+                        <li><a href="#">AlgoType3</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <h6 class="uppercase py-1">Features</h6>
+                    <ul class="py-1 px-0">
+                        <li><a href="#">Responsive</a></li>
+                        <li><a href="#">Modular</a></li>
+                        <li><a href="#">Affordable</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <h6 class="uppercase py-1">Technologies</h6>
+                    <ul class="py-1 px-0">
+                        <li><a href="#">Jquery</a></li>
+                        <li><a href="#">HTML5</a></li>
+                        <li><a href="#">SAAS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3 my-1 text-center py-2">
+            <h6 class="uppercase py-1">About</h6>
+            <small class="lighter my-3 op-7 inline font-body">A simple to use, modular and responsive set of components
+                and ready made pages to launch your next project.
+            </small>
+        </div>
+        <div class="col-12 ">
+            <div class="mline bg-dark"></div>
+        </div>
+    </div>
+</footer>
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

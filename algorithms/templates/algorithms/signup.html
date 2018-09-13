@@ -1,0 +1,36 @@
+{% extends "algorithms/wrapper.html" %}
+{% block content %}
+{% load static %}
+<section class="form-style-9 p-relative bg-white background-cover"
+         style="background-image:url('{% static 'algorithms/images/scene.jpeg' %}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-10 mx-auto my-5">
+                <div class="card p-4 bg-hue-red my-5 background-cover no-border material-shadow"
+                     style="background-image:url('{% static 'algorithms/images/red_clouds.jpeg' %}');">
+                    <div class="row">
+                        <div class="col-10 mx-auto col-lg-6 cwhite px-5">
+                            <form>
+                                <h4 class="font-title my-3">Sign Up</h4>
+                                <div class="form-group">
+                                    <input class="form-control bg-transparent flat no-border" placeholder="Name"
+                                           type="name">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control bg-transparent flat no-border" placeholder="Email..."
+                                           type="email">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control bg-transparent flat no-border" placeholder="Password"
+                                           type="password">
+                                </div>
+                                <button class="btn btn-warning w-100 my-3">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
