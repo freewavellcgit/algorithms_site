@@ -1,0 +1,51 @@
+{% extends "algorithms/wrapper.html" %}
+{% block content %}
+{% load static %}
+<section class="form-style-10 p-relative bg-white background-cover"
+         style="background-image:url('{% static 'algorithms/images/scene.jpeg' %}');">
+    <div class="overlay op-7 bg-hue-turquoise"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-10 mx-auto my-5">
+                <div class="card my-5 no-border material-shadow">
+                    <div class="row">
+                        <div class="col-10 mx-auto col-lg-7 cwhite p-5 background-cover bolder align-center justify-center"
+                             style="background-image:url('{% static 'algorithms/images/parachute.jpg' %}');">
+                            <div class="overlay op-7 bg-hue-dark"></div>
+                            <div class="content p-relative">
+                                <h1 class="text-left font-title display-3">Hello World!</h1>
+                                <p>Start your journey by logging in.</p>
+                            </div>
+                        </div>
+                        <div class="col-10 mx-auto col-lg-5 p-5">
+                            <form>
+                                <h4 class="font-title my-3">Login</h4>
+                                <div class="form-group">
+
+                                    <input class="form-control bg-transparent flat  " placeholder="Name" type="name">
+                                </div>
+                                <div class="form-group">
+
+                                    <input class="form-control bg-transparent flat " placeholder="Email..."
+                                           type="email">
+                                </div>
+                                <div class="form-group text-center">
+                                    <button class="btn btn-warning material-shadow">Login</button>
+                                </div>
+
+                                <small>or use your social accounts</small>
+                                <div class="w-100 my-2 block text-center">
+                                    <a class="btn btn-outline-dark m-2" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-outline-dark m-2" href="#"><i class="fa fa-google"></i></a>
+                                    <a class="btn btn-outline-dark m-2" href="#"><i class="fa fa-twitter"></i></a>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

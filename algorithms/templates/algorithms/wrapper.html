@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{% static 'algorithms/plugins/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'algorithms/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'algorithms/css/styles.css' %}">
+    <title>Algorithms</title>
+</head>
+<body class="bg-dark-gradient">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark-gradient navbar-style-9 font-title py-3">
+    <div class="container">
+        <a class="navbar-brand" href="/"><img src="{% static 'algorithms/images/favicon.png' %}"
+                                              class="mr-2" width="40" height="40" alt="My image"><b>Algo</b>Help</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent9"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent9">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="position: absolute;">
+                        <a class="dropdown-item" href="#">Algorithms</a>
+                        <a class="dropdown-item" href="#">Something</a>
+                        <a class="dropdown-item" href="#">Something Else</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item mx-1 d-none d-lg-block">
+                    <a href="/login/" class="btn btn-warning  mx-2">Log In<i class="fa fa-chevron-right ml-3"></i></a>
+                </li>
+                <li class="nav-item mx-1 d-none d-lg-block">
+                    <a href="/signup/" class="btn btn-success  mx-2">Sign Up<i class="fa fa-chevron-right ml-3"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block content %}
+{% endblock %}
+<footer class="footer-style-13 p-3 background-cover cwhite"
+        style="background-image:url('{% static 'algorithms/images/hill-gradients.jpeg' %}')">
+    <div class="overlay op-7 bg-dark"></div>
+    <div class="row">
+        <div class="col-12 col-lg-3 my-1 text-center py-2">
+            <img src="{% static 'algorithms/images/favicon.png' %}" class="mr-2" width="40px" height="40px"><span
+                class="font-title h5"><b>Algo</b>Help</span><br>
+            <small class="lighter my-3 op-7 inline">© 2018 All Rights Reserved</small>
+            <ul class="py-2 px-0">
+                <li class="inline"><a href="#" class=" circle btn-outline-light btn m-1 inline"><i
+                        class="fa fa-google"></i></a></li>
+                <li class="inline"><a href="#" class=" circle btn-outline-light btn m-1 inline"><i
+                        class="fa fa-twitter"></i></a></li>
+                <li class="inline"><a href="#" class=" circle btn-outline-light btn m-1 inline"><i
+                        class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-lg-6 d-none d-sm-block my-1 text-left py-2 font-title">
+            <div class="row">
+                <div class="col-4">
+                    <h6 class="uppercase py-1">Categories</h6>
+                    <ul class="py-1 px-0">
+                        <li><a href="#">AlgoTpe1</a></li>
+                        <li><a href="#">AlgoType2</a></li>
+                        <li><a href="#">AlgoType3</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <h6 class="uppercase py-1">Features</h6>
+                    <ul class="py-1 px-0">
+                        <li><a href="#">Responsive</a></li>
+                        <li><a href="#">Modular</a></li>
+                        <li><a href="#">Affordable</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <h6 class="uppercase py-1">Technologies</h6>
+                    <ul class="py-1 px-0">
+                        <li><a href="#">Jquery</a></li>
+                        <li><a href="#">HTML5</a></li>
+                        <li><a href="#">SAAS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3 my-1 text-center py-2">
+            <h6 class="uppercase py-1">About</h6>
+            <small class="lighter my-3 op-7 inline font-body">A simple to use, modular and responsive set of components
+                and ready made pages to launch your next project.
+            </small>
+        </div>
+        <div class="col-12 ">
+            <div class="mline bg-dark"></div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

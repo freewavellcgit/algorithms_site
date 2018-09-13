@@ -6,4 +6,7 @@ class Algorithm(models.Model):
     description = models.CharField(max_length=300)
     text = models.TextField()
     pub_date = models.DateTimeField('date published')
+    author = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.name
