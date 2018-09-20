@@ -1,6 +1,22 @@
-{% extends "algorithms/wrapper.html" %}
+{% extends "registration/wrapper.html" %}
 {% block content %}
 {% load static %}
+{% if form.errors %}
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert {% if message.tags %} alert-{{ message.tags }}{% endif %}">{{ message|safe }}</div>
+    {% endfor %}
+  {% endif %}
+{% endif %}
+
+{% if next %}
+  {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+  {% else %}
+    <p>Please login to see this page.</p>
+  {% endif %}
+{% endif %}
 <section class="form-style-10 p-relative bg-white background-cover"
          style="background-image:url('{% static 'algorithms/images/scene.jpeg' %}');">
     <div class="overlay op-7 bg-hue-turquoise"></div>
@@ -18,19 +34,19 @@
                             </div>
                         </div>
                         <div class="col-10 mx-auto col-lg-5 p-5">
-                            <form>
+                            <form method="post" action="{% url 'login' %}">
+                                {% csrf_token %}
                                 <h4 class="font-title my-3">Login</h4>
                                 <div class="form-group">
-
-                                    <input class="form-control bg-transparent flat  " placeholder="Name" type="name">
+                                    <div class="form-control bg-transparent flat  " placeholder="Name" type="name">{{ form.username }}</div>
                                 </div>
                                 <div class="form-group">
-
-                                    <input class="form-control bg-transparent flat " placeholder="Email..."
-                                           type="email">
+                                    <div class="form-control bg-transparent flat  " placeholder="Password" type="password">{{ form.password }}</div>
                                 </div>
+
                                 <div class="form-group text-center">
-                                    <button class="btn btn-warning material-shadow">Login</button>
+                                    <button class="btn btn-warning material-shadow" type="submit" value="login">Login</button>
+                                    <input type="hidden" name="next" value="{{ next }}">
                                 </div>
 
                                 <small>or use your social accounts</small>
@@ -38,9 +54,9 @@
                                     <a class="btn btn-outline-dark m-2" href="#"><i class="fa fa-facebook"></i></a>
                                     <a class="btn btn-outline-dark m-2" href="#"><i class="fa fa-google"></i></a>
                                     <a class="btn btn-outline-dark m-2" href="#"><i class="fa fa-twitter"></i></a>
-
                                 </div>
                             </form>
+                            <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
                         </div>
                     </div>
                 </div>

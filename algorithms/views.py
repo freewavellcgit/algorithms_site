@@ -20,11 +20,4 @@ def detail(request, algorithm_id):
     return render(request, 'algorithms/detail.html', {'algorithm': algorithm})
 
 
-def login(request):
-    return render(request, 'algorithms/login.html')
-
-
-def signup(request):
-    return render(request, 'algorithms/signup.html')
-
 
